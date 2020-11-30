@@ -30,3 +30,7 @@ General naming logic is {production field}_{description of statistic}_{period}. 
 
 * TODO Add to previous two new features like that day up to that moment, per that week upto that moment and total upto that moment???
 * TODO Add production averages per week??
+
+
+##Results
+Add your model jupyter notebook references and results to [Results.md](Results.md).
