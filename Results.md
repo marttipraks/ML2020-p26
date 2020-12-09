@@ -15,8 +15,7 @@ Function to calculate the Daily and 15 min scores: [calculate_model_statistics.p
 |Baseline - Plant 1|[link](/Analysis/01_running_mean.ipynb)|Last 3 days average for each inverter|RMSE:3079888.0; MAE:1823703.0; R2:-0.01559|RMSE:2572.0; MAE:1020.0; R2:0.4135|Completed
 |Linear regression - Plant 1|[link](/Analysis/xyz.ipynb)|TBD|TBD|TBD|Under work
 |Logistic regression - Plant 1|[link](/Analysis/xyz.ipynb)|TBD|TBD|TBD|Under work
-|Random Forest - Plant 1|[link](/Analysis/xyz.ipynb)|TBD|RMSE 3607.6; MAE 2952.3; R2 -0.1538|RMSE 5222459.1; MAE 3624121.4; R2 -1.9201
-
+|Random Forest - Plant 1|[link](/Analysis/xyz.ipynb)|TBD|RMSE 3607.6; MAE 2952.3; R2 -0.1538|RMSE 5222459.1; MAE 3624121.4; R2 -1.9201|Completed
 |XGBoost - Plant 1|[link](/Analysis/02_XGBoost_v4_Plant1.ipynb)|Feature reduction from all to best RMSE on train data. Best features set: 'HOUR', 'MINUTE', 'DAY_OF_YEAR', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_1', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_1', 'IRRADIATION_PER_INVERTER_DAY_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_2', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_2', 'IRRADIATION_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_3', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_3', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_3', 'IRRADIATION_PER_INVERTER_DAY_SHIFT_MINUS_3'|RMSE:4401179.0; MAE:3759344.0; R2:-1.0739|RMSE:3427.0; MAE:1793.0; R2:-0.04139|Completed
 
 ### Plant 2
