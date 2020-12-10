@@ -26,9 +26,9 @@ Function to calculate the Daily and 15 min scores: [calculate_model_statistics.p
 |XGBRegressor - Plant 2|[link](/Analysis/02_XGBoost_v4_Plant2.ipynb)|Feature reduction from all to best RMSE on train data. Best features set: 'HOUR', 'DAY_OF_YEAR', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_1', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_1', 'IRRADIATION_PER_INVERTER_DAY_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_2', 'IRRADIATION_PER_INVERTER_DAY_SHIFT_MINUS_2', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_3', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_3', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_3', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_3'|RMSE:96060.0; MAE:73384.0; R2:-2.57024|RMSE:193.0; MAE:102.0; R2:0.55495|Completed
 
 
-#Days predicions on test data 
-###3 day running mean - baseline - Plant 1
-####Idx - Day of year - Actual - Prediction
+# Days predicions on test data 
+### 3 day running mean - baseline - Plant 1
+#### Idx - Day of year - Actual - Prediction
 0          162  0.000000e+00            0.000000e+00<br/>
 1          163  0.000000e+00            0.000000e+00<br/>
 2          164  0.000000e+00            0.000000e+00<br/>
@@ -38,8 +38,8 @@ Function to calculate the Daily and 15 min scores: [calculate_model_statistics.p
 6          168  5.572501e+06            6.666602e+06<br/>
 7          169  5.317780e+06            5.992844e+06<br/>
 
-###3 day running mean - baseline - Plant 2
-####Idx - Day of year - Actual - Prediction
+### 3 day running mean - baseline - Plant 2
+#### Idx - Day of year - Actual - Prediction
 0          162  393589.770390           543879.961868<br/>
 1          163  342752.854139           517316.908030<br/>
 2          164  411233.862857           430123.237859<br/>
@@ -49,8 +49,8 @@ Function to calculate the Daily and 15 min scores: [calculate_model_statistics.p
 6          168  480810.068571           457405.383968<br/>
 7          169  380211.240476           465906.810000<br/>
 
-###Linear Plant 1
-####Idx - Day of year - Actual - Prediction
+### Linear Plant 1
+#### Idx - Day of year - Actual - Prediction
 0          162  0.000000e+00            3.289524e+04<br/>
 1          163  0.000000e+00            3.289524e+04<br/>
 2          164  0.000000e+00            3.289524e+04<br/>
@@ -60,8 +60,8 @@ Function to calculate the Daily and 15 min scores: [calculate_model_statistics.p
 6          168  5.572501e+06            5.658541e+06<br/>
 7          169  5.317780e+06            5.322354e+06<br/>
 
-###Linear Plant 2
-####Idx - Day of year - Actual - Prediction
+### Linear Plant 2
+#### Idx - Day of year - Actual - Prediction
 0          162  393589.770390           413142.507395<br/>
 1          163  342752.854139           352196.705814<br/>
 2          164  411233.862857           413048.274258<br/>
@@ -71,16 +71,16 @@ Function to calculate the Daily and 15 min scores: [calculate_model_statistics.p
 6          168  480810.068571           476463.357922<br/>
 7          169  380211.240476           390062.789857<br/>
 
-###Random Forest Plant 1
-####Idx - Day of year - Actual - Prediction
+### Random Forest Plant 1
+#### Idx - Day of year - Actual - Prediction
 predictions here...
 
-###Random Forest Plant 2
-####Idx - Day of year - Actual - Prediction
+### Random Forest Plant 2
+#### Idx - Day of year - Actual - Prediction
 predictions here...
 
-###XGBRegressor Plant 1
-####Idx - Day of year - Actual - Prediction
+### XGBRegressor Plant 1
+#### Idx - Day of year - Actual - Prediction
 0          162  0.000000e+00            9.289014e+05<br/>
 1          163  0.000000e+00            9.289014e+05<br/>
 2          164  0.000000e+00            9.289014e+05<br/>
@@ -90,8 +90,8 @@ predictions here...
 6          168  5.572501e+06            7.125511e+05<br/>
 7          169  5.317780e+06            7.889261e+05<br/>
 
-###XGBRegressor Plant 2
-####Idx - Day of year - Actual - Prediction
+### XGBRegressor Plant 2
+#### Idx - Day of year - Actual - Prediction
 0          162  393589.770390            546967.68750<br/>
 1          163  342752.854139            500868.56250<br/>
 2          164  411233.862857            414590.68750<br/>
