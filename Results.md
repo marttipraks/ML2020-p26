@@ -16,7 +16,7 @@ Function to calculate the Daily and 15 min scores: [calculate_model_statistics.p
 |Linear regression - Plant 1|[link](/Analysis/xyz.ipynb)|Important features (8): 'DC_POWER_PER_INVERTER_MOMENT_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_1', 'AC_POWER_PER_INVERTER_MOMENT_SHIFT_MINUS_1', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_1', 'IRRADIATION_PER_INVERTER_MOMENT_SHIFT_MINUS_1', 'IRRADIATION_PER_INVERTER_DAY_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_MOMENT_SHIFT_MINUS_3', 'AC_POWER_PER_INVERTER_MOMENT_SHIFT_MINUS_3'|RMSE:259960.0; MAE:137526.0; R2:0.99276|RMSE:868.0; MAE:375.0; R2:0.93314|Completed
 |Random Forest - Plant 1|[link](/Analysis/xyz.ipynb)|Initial attempt was using all feautures and using Grid Search CV to tune hyperparameters. After that used PCA and reduced number of components to only 4, while explaining 99% of variance.|RMSE 3607.6; MAE 2952.3; R2 -0.1538|RMSE 5222459.1; MAE 3624121.4; R2 -1.9201|Completed
 |XGBRegressor - Plant 1|[link](/Analysis/02_XGBoost_v4_Plant1.ipynb)|Feature reduction from all to best RMSE on train data. Best features set: 'HOUR', 'MINUTE', 'DAY_OF_YEAR', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_1', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_1', 'IRRADIATION_PER_INVERTER_DAY_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_2', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_2', 'IRRADIATION_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_3', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_3', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_3', 'IRRADIATION_PER_INVERTER_DAY_SHIFT_MINUS_3'|RMSE:4401179.0; MAE:3759344.0; R2:-1.0739|RMSE:3427.0; MAE:1793.0; R2:-0.04139|Completed
-|Support vector regression - Plant 1|[link](/Support vector regression.ipynb)| | | |Completed
+|Support vector regression - Plant 1|[link](/Support vector regression.ipynb)| |RMSE:2695221.0; MAE:1098685.0; R2:0.22225 |RMSE:2401.0; MAE:868.0; R2:0.4891 |Completed
 
 ### Plant 2
 |Method|Link to Source|Comments-parameters|SCORE day (DC_POWER)|SCORE 15min (DC_POWER)|Status
@@ -105,14 +105,14 @@ predictions here...
 
 ### Support vector regression Plant 1
 #### Idx - Day of year - Actual - Prediction
-0          162  393589.770390            <br/>
-1          163  342752.854139            <br/>
-2          164  411233.862857            <br/>
-3          165  455305.790476            <br/>
-4          166  505911.451905            <br/>
-5          167  410998.909524            <br/>
-6          168  480810.068571            <br/>
-7          169  380211.240476            <br/>
+0          162  0.000000e+00            1.979500e+02<br/>
+1          163  0.000000e+00            1.979500e+02<br/>
+2          164  0.000000e+00            1.979500e+02<br/>
+3          165  7.593776e+06            1.979500e+02<br/>
+4          166  6.350495e+06            6.873598e+06<br/>
+5          167  6.055536e+06            5.748259e+06<br/>
+6          168  5.572501e+06            5.481281e+06<br/>
+7          169  5.317780e+06            5.044069e+06<br/>
 
 ### Support vector regression Plant 2
 #### Idx - Day of year - Actual - Prediction
