@@ -16,6 +16,7 @@ Function to calculate the Daily and 15 min scores: [calculate_model_statistics.p
 |Linear regression - Plant 1|[link](/Analysis/xyz.ipynb)|Important features (8): 'DC_POWER_PER_INVERTER_MOMENT_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_1', 'AC_POWER_PER_INVERTER_MOMENT_SHIFT_MINUS_1', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_1', 'IRRADIATION_PER_INVERTER_MOMENT_SHIFT_MINUS_1', 'IRRADIATION_PER_INVERTER_DAY_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_MOMENT_SHIFT_MINUS_3', 'AC_POWER_PER_INVERTER_MOMENT_SHIFT_MINUS_3'|RMSE:259960.0; MAE:137526.0; R2:0.99276|RMSE:868.0; MAE:375.0; R2:0.93314|Completed
 |Random Forest - Plant 1|[link](/Analysis/xyz.ipynb)|Initial attempt was using all feautures and using Grid Search CV to tune hyperparameters. After that used PCA and reduced number of components to only 4, while explaining 99% of variance.|RMSE 3607.6; MAE 2952.3; R2 -0.1538|RMSE 5222459.1; MAE 3624121.4; R2 -1.9201|Completed
 |XGBRegressor - Plant 1|[link](/Analysis/02_XGBoost_v4_Plant1.ipynb)|Feature reduction from all to best RMSE on train data. Best features set: 'HOUR', 'MINUTE', 'DAY_OF_YEAR', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_1', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_1', 'IRRADIATION_PER_INVERTER_DAY_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_2', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_2', 'IRRADIATION_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_3', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_3', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_3', 'IRRADIATION_PER_INVERTER_DAY_SHIFT_MINUS_3'|RMSE:4401179.0; MAE:3759344.0; R2:-1.0739|RMSE:3427.0; MAE:1793.0; R2:-0.04139|Completed
+|Support vector regression - Plant 1|[link](/Support vector regression.ipynb)| | | |Completed
 
 ### Plant 2
 |Method|Link to Source|Comments-parameters|SCORE day (DC_POWER)|SCORE 15min (DC_POWER)|Status
@@ -24,6 +25,7 @@ Function to calculate the Daily and 15 min scores: [calculate_model_statistics.p
 |Linear regression - PLant 2|[link](/Analysis/xyz.ipynb)|Important features (13): 'DC_POWER_PER_INVERTER_MOMENT_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_1', 'AC_POWER_PER_INVERTER_MOMENT_SHIFT_MINUS_1', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_1', 'IRRADIATION_PER_INVERTER_MOMENT_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_MOMENT_SHIFT_MINUS_2', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AC_POWER_PER_INVERTER_MOMENT_SHIFT_MINUS_2', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'DC_POWER_PER_INVERTER_MOMENT_SHIFT_MINUS_3', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_3', 'AC_POWER_PER_INVERTER_MOMENT_SHIFT_MINUS_3', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_3'|RMSE:9604.0; MAE:8138.0; R2:0.96431|RMSE:125.0; MAE:62.0; R2:0.81206|Completed
 |Random Forest - Plant 2|[link](/Analysis/xyz.ipynb)|Initial attempt was using all feautures and using Grid Search CV to tune hyperparameters. After that used PCA and reduced number of components to only 5, while explaining 99% of variance.|RMSE 94247.1; MAE 81524.6;R2 -2.4367|RMSE 206.5; MAE 110.1; R2 0.489 |Completed
 |XGBRegressor - Plant 2|[link](/Analysis/02_XGBoost_v4_Plant2.ipynb)|Feature reduction from all to best RMSE on train data. Best features set: 'HOUR', 'DAY_OF_YEAR', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_1', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_1', 'IRRADIATION_PER_INVERTER_DAY_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_2', 'IRRADIATION_PER_INVERTER_DAY_SHIFT_MINUS_2', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_3', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_3', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_3', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_3'|RMSE:96060.0; MAE:73384.0; R2:-2.57024|RMSE:193.0; MAE:102.0; R2:0.55495|Completed
+|Support vector regression - Plant 2|[link](/Support vector regression.ipynb)| |RMSE:82134.0; MAE:77719.0; R2:-1.61012|RMSE:230.0; MAE:111.0; R2:0.3689|Completed
 
 
 # Days predicions on test data 
@@ -101,5 +103,25 @@ predictions here...
 6          168  480810.068571            495220.18750<br/>
 7          169  380211.240476            486095.25000<br/>
 
+### Support vector regression Plant 1
+#### Idx - Day of year - Actual - Prediction
+0          162  393589.770390            <br/>
+1          163  342752.854139            <br/>
+2          164  411233.862857            <br/>
+3          165  455305.790476            <br/>
+4          166  505911.451905            <br/>
+5          167  410998.909524            <br/>
+6          168  480810.068571            <br/>
+7          169  380211.240476            <br/>
 
+### Support vector regression Plant 2
+#### Idx - Day of year - Actual - Prediction
+0          162  393589.770390            522478.498884<br/>
+1          163  342752.854139            371238.23824<br/>
+2          164  411233.862857            323315.544653<br/>
+3          165  455305.790476            387870.884356<br/>
+4          166  505911.451905            429416.391819<br/>
+5          167  410998.909524            477121.087261<br/>
+6          168  480810.068571            387649.399706<br/>
+7          169  380211.240476            453458.638964<br/>
 
