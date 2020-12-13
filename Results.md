@@ -87,9 +87,16 @@ Function to calculate the Daily and 15 min scores: [calculate_model_statistics.p
 
 ### Random Forest Plant 2
 #### Idx - Day of year - Actual - Prediction
-predictions here...
+0          162    393589.770390       519517.559642
+1          163    342752.854139       479125.969286
+2          164    411233.862857       450419.196099
+3          165    455305.790476       450667.489504
+4          166    505911.451905       462197.870685
+5          167    410998.909524       518962.580603
+6          168    480810.068571       524179.728576
+7          169    380211.240476       488056.642407
 
-### XGBRegressor Plant 1
+## XGBRegressor Plant 1
 #### Idx - Day of year - Actual - Prediction
 0          162  0.000000e+00            9.289014e+05<br/>
 1          163  0.000000e+00            9.289014e+05<br/>
