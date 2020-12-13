@@ -14,8 +14,8 @@ The function also reports R2, which is not a good model measure for our case. Do
 |Method|Link to Source|Comments-parameters|SCORE day (DC_POWER)|SCORE 15min (DC_POWER)|Status
 |---------|------------|------|-----|---|---|
 |Baseline - Plant 1|[link](/Analysis/01_running_mean.ipynb)|Last 3 days average for each inverter|RMSE:3079888.0; MAE:1823703.0; R2:-0.01559|RMSE:2572.0; MAE:1020.0; R2:0.4135|Completed
-|Linear regression - Plant 1|[link](/Analysis/xyz.ipynb)|Important features (8): 'DC_POWER_PER_INVERTER_MOMENT_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_1', 'AC_POWER_PER_INVERTER_MOMENT_SHIFT_MINUS_1', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_1', 'IRRADIATION_PER_INVERTER_MOMENT_SHIFT_MINUS_1', 'IRRADIATION_PER_INVERTER_DAY_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_MOMENT_SHIFT_MINUS_3', 'AC_POWER_PER_INVERTER_MOMENT_SHIFT_MINUS_3'|RMSE:259960.0; MAE:137526.0; R2:0.99276|RMSE:868.0; MAE:375.0; R2:0.93314|Completed
-|Random Forest - Plant 1|[link](/Analysis/xyz.ipynb)|Initial attempt was using all feautures and using Grid Search CV to tune hyperparameters. After that used PCA and reduced number of components to only 4, while explaining 99% of variance.|RMSE 3607.6; MAE 2952.3; R2 -0.1538|RMSE 5222459.1; MAE 3624121.4; R2 -1.9201|Completed
+|Linear regression - Plant 1|[link](/Analysis/xyz.ipynb)|Important features (14): 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_1', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_1', 'TOTAL_YIELD_PER_INVERTER_DAY_SHIFT_MINUS_1', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'TOTAL_YIELD_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_2', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_2', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_3', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_3', 'TOTAL_YIELD_PER_INVERTER_DAY_SHIFT_MINUS_3', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_3', 'IRRADIATION_PER_INVERTER_DAY_SHIFT_MINUS_3'|RMSE:2424053.0; MAE:1674448.0; R2:0.37088|RMSE:2298.0; MAE:1198.0; R2:0.53173|Completed
+|Random Forest - Plant 1|[link](/Analysis/xyz.ipynb)|Initial attempt was using all feautures and using Grid Search CV to tune hyperparameters. After that used PCA and reduced number of components to only 4, while explaining 99% of variance.|RMSE 5222459.1; MAE 3624121.4; R2 -1.9201|RMSE 3607.6; MAE 2952.3; R2 -0.1538|Completed 
 |XGBRegressor - Plant 1|[link](/Analysis/02_XGBoost_v4_Plant1.ipynb)|Feature reduction from all to best RMSE on train data. Best features set: 'HOUR', 'MINUTE', 'DAY_OF_YEAR', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_1', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_1', 'IRRADIATION_PER_INVERTER_DAY_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_2', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_2', 'IRRADIATION_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_3', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_3', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_3', 'IRRADIATION_PER_INVERTER_DAY_SHIFT_MINUS_3'|RMSE:4401179.0; MAE:3759344.0; R2:-1.0739|RMSE:3427.0; MAE:1793.0; R2:-0.04139|Completed
 |Support vector regression - Plant 1|[link](/Analysis/Support vector regression.ipynb)| |RMSE:2695221.0; MAE:1098685.0; R2:0.22225 |RMSE:2401.0; MAE:868.0; R2:0.4891 |Completed
 
@@ -23,7 +23,7 @@ The function also reports R2, which is not a good model measure for our case. Do
 |Method|Link to Source|Comments-parameters|SCORE day (DC_POWER)|SCORE 15min (DC_POWER)|Status
 |---------|------------|------|-----|---|---|
 |Baseline - Plant 2|[link](/Analysis/01_running_mean.ipynb)|Last 3 days average for each inverter|RMSE:99585.0; MAE:84365.0; R2:-2.83702|RMSE:222.0; MAE:116.0; R2:0.40737|Completed
-|Linear regression - PLant 2|[link](/Analysis/xyz.ipynb)|Important features (13): 'DC_POWER_PER_INVERTER_MOMENT_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_1', 'AC_POWER_PER_INVERTER_MOMENT_SHIFT_MINUS_1', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_1', 'IRRADIATION_PER_INVERTER_MOMENT_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_MOMENT_SHIFT_MINUS_2', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AC_POWER_PER_INVERTER_MOMENT_SHIFT_MINUS_2', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'DC_POWER_PER_INVERTER_MOMENT_SHIFT_MINUS_3', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_3', 'AC_POWER_PER_INVERTER_MOMENT_SHIFT_MINUS_3', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_3'|RMSE:9604.0; MAE:8138.0; R2:0.96431|RMSE:125.0; MAE:62.0; R2:0.81206|Completed
+|Linear regression - PLant 2|[link](/Analysis/xyz.ipynb)|Important features (10): 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_1', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_1', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_1', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_2', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_2', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_3', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_3'|RMSE:89034.0; MAE:73172.0; R2:-2.06707|RMSE:186.0; MAE:111.0; R2:0.58398|Completed
 |Random Forest - Plant 2|[link](/Analysis/xyz.ipynb)|Initial attempt was using all feautures and using Grid Search CV to tune hyperparameters. After that used PCA and reduced number of components to only 5, while explaining 99% of variance.|RMSE 94247.1; MAE 81524.6;R2 -2.4367|RMSE 206.5; MAE 110.1; R2 0.489 |Completed
 |XGBRegressor - Plant 2|[link](/Analysis/02_XGBoost_v4_Plant2.ipynb)|Feature reduction from all to best RMSE on train data. Best features set: 'HOUR', 'DAY_OF_YEAR', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_1', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_1', 'IRRADIATION_PER_INVERTER_DAY_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_2', 'IRRADIATION_PER_INVERTER_DAY_SHIFT_MINUS_2', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_3', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_3', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_3', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_3'|RMSE:96060.0; MAE:73384.0; R2:-2.57024|RMSE:193.0; MAE:102.0; R2:0.55495|Completed
 |Support vector regression - Plant 2|[link](/Analysis/Support vector regression.ipynb)| |RMSE:82134.0; MAE:77719.0; R2:-1.61012|RMSE:230.0; MAE:111.0; R2:0.3689|Completed
@@ -54,35 +54,50 @@ The function also reports R2, which is not a good model measure for our case. Do
 
 ### Linear Plant 1
 #### Idx - Day of year - Actual - Prediction
-0          162  0.000000e+00            3.289524e+04<br/>
-1          163  0.000000e+00            3.289524e+04<br/>
-2          164  0.000000e+00            3.289524e+04<br/>
-3          165  7.593776e+06            6.890965e+06<br/>
-4          166  6.350495e+06            6.539306e+06<br/>
-5          167  6.055536e+06            6.074819e+06<br/>
-6          168  5.572501e+06            5.658541e+06<br/>
-7          169  5.317780e+06            5.322354e+06<br/>
+0          162  0.000000e+00            1.527288e+06<br/>
+1          163  0.000000e+00            1.527288e+06<br/>
+2          164  0.000000e+00            1.527288e+06<br/>
+3          165  7.593776e+06            1.527288e+06<br/>
+4          166  6.350495e+06            4.737070e+06<br/>
+5          167  6.055536e+06            5.349218e+06<br/>
+6          168  5.572501e+06            5.444664e+06<br/>
+7          169  5.317780e+06            5.018125e+06<br/>
 
 ### Linear Plant 2
 #### Idx - Day of year - Actual - Prediction
-0          162  393589.770390           413142.507395<br/>
-1          163  342752.854139           352196.705814<br/>
-2          164  411233.862857           413048.274258<br/>
-3          165  455305.790476           462131.013047<br/>
-4          166  505911.451905           501781.214514<br/>
-5          167  410998.909524           420138.098862<br/>
-6          168  480810.068571           476463.357922<br/>
-7          169  380211.240476           390062.789857<br/>
+0          162  393589.770390           547289.878305<br/>
+1          163  342752.854139           475413.596101<br/>
+2          164  411233.862857           388800.203925<br/>
+3          165  455305.790476           410535.787869<br/>
+4          166  505911.451905           476915.730874<br/>
+5          167  410998.909524           513485.802099<br/>
+6          168  480810.068571           471319.237131<br/>
+7          169  380211.240476           471052.421460<br/>
 
 ### Random Forest Plant 1
 #### Idx - Day of year - Actual - Prediction
-predictions here...
+0          162    0.000000e+00          8.326508e+06<br/>
+1          163    0.000000e+00          8.071716e+06<br/>
+2          164    0.000000e+00          8.054387e+06<br/>
+3          165    7.593776e+06          8.054387e+06<br/>
+4          166    6.350495e+06          5.642345e+06<br/>
+5          167    6.055536e+06          3.869340e+06<br/>
+6          168    5.572501e+06          5.497962e+06<br/>
+7          169    5.317780e+06          5.346188e+06<br/>
+
 
 ### Random Forest Plant 2
 #### Idx - Day of year - Actual - Prediction
-predictions here...
+0          162    393589.770390       519517.559642<br/>
+1          163    342752.854139       479125.969286<br/>
+2          164    411233.862857       450419.196099<br/>
+3          165    455305.790476       450667.489504<br/>
+4          166    505911.451905       462197.870685<br/>
+5          167    410998.909524       518962.580603<br/>
+6          168    480810.068571       524179.728576<br/>
+7          169    380211.240476       488056.642407<br/>
 
-### XGBRegressor Plant 1
+## XGBRegressor Plant 1
 #### Idx - Day of year - Actual - Prediction
 0          162  0.000000e+00            9.289014e+05<br/>
 1          163  0.000000e+00            9.289014e+05<br/>
