@@ -75,7 +75,15 @@ Function to calculate the Daily and 15 min scores: [calculate_model_statistics.p
 
 ### Random Forest Plant 1
 #### Idx - Day of year - Actual - Prediction
-predictions here...
+0          162    0.000000e+00          8.326508e+06<br/>
+1          163    0.000000e+00          8.071716e+06<br/>
+2          164    0.000000e+00          8.054387e+06<br/>
+3          165    7.593776e+06          8.054387e+06<br/>
+4          166    6.350495e+06          5.642345e+06<br/>
+5          167    6.055536e+06          3.869340e+06<br/>
+6          168    5.572501e+06          5.497962e+06<br/>
+7          169    5.317780e+06          5.346188e+06<br/>
+
 
 ### Random Forest Plant 2
 #### Idx - Day of year - Actual - Prediction
