@@ -1,7 +1,10 @@
 # ML2020-p26
 Kaggle Solar Power Generation Data projekt for Machine Learning 2020 in Univeristy of Tartu. 
 
-New features created:
+## Results
+Add your model jupyter notebook references and results to [Results.md](Results.md).
+
+## New features created:
 General naming logic is {production field}_{description of statistic}_{period}. Following fields were created:
 
 {production fields} = AC_POWER, DC_POWER, DAILY_YIELD. TOTAL_YIELD
@@ -32,5 +35,3 @@ General naming logic is {production field}_{description of statistic}_{period}. 
 * TODO Add production averages per week??
 
 
-##Results
-Add your model jupyter notebook references and results to [Results.md](Results.md).
