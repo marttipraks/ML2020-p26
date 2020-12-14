@@ -17,7 +17,7 @@ The function also reports R2, which is not a good model measure for our case. Do
 |Linear regression - Plant 1|[link](/Analysis/xyz.ipynb)|Important features (10): 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_1', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_1', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_1', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_3', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_3', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_3', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_3'|RMSE:1262887.0; MAE:1091779.0; R2:-1.6938|RMSE:1682.0; MAE:870.0; R2:0.78959|Completed
 |Random Forest - Plant 1|[link](/Analysis/xyz.ipynb)|Initial attempt was using all feautures and using Grid Search CV to tune hyperparameters. After that used PCA and reduced number of components to only 4, while explaining 99% of variance.|RMSE 1568941.3; MAE 1444176.8; R2 -3.157|RMSE 1808.5; MAE 1027.; R2 0.756|Completed 
 |XGBRegressor - Plant 1|[link](/Analysis/02_XGBoost_v4_Plant1.ipynb)|Feature reduction from all to best RMSE on train data. Best features set: 'HOUR', 'MINUTE', 'DAY_OF_YEAR', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_1', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_1', 'IRRADIATION_PER_INVERTER_DAY_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_2', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_2', 'IRRADIATION_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_3', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_3', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_3', 'IRRADIATION_PER_INVERTER_DAY_SHIFT_MINUS_3'|RMSE:1320368.0; MAE:1214055.0; R2:-1.9446|RMSE:1609.0; MAE:844.0; R2:0.80759|Completed
-|Support vector regression - Plant 1|[link](/Analysis/Support%20vector%20regression.ipynb)| |RMSE:2695221.0; MAE:1098685.0; R2:0.22225 |RMSE:2401.0; MAE:868.0; R2:0.4891 |Completed
+|Support vector regression - Plant 1|[link](/Analysis/Support%20vector%20regression.ipynb)| |RMSE:1089902.0; MAE:698708.0; R2:-1.00637|RMSE:1768.0; MAE:894.0; R2:0.7676|Completed
 
 ### Plant 2
 |Method|Link to Source|Comments-parameters|SCORE day (DC_POWER)|SCORE 15min (DC_POWER)|Status
@@ -121,14 +121,14 @@ The function also reports R2, which is not a good model measure for our case. Do
 
 ### Support vector regression Plant 1
 #### Idx - Day of year - Actual - Prediction
-0          162  0.000000e+00            1.979500e+02<br/>
-1          163  0.000000e+00            1.979500e+02<br/>
-2          164  0.000000e+00            1.979500e+02<br/>
-3          165  7.593776e+06            1.979500e+02<br/>
-4          166  6.350495e+06            6.873598e+06<br/>
-5          167  6.055536e+06            5.748259e+06<br/>
-6          168  5.572501e+06            5.481281e+06<br/>
-7          169  5.317780e+06            5.044069e+06<br/>
+0          162  5.784040e+06            6.624898e+06<br/>
+1          163  5.045679e+06            5.297057e+06<br/>
+2          164  5.222354e+06            4.620887e+06<br/>
+3          165  7.593776e+06            4.782682e+06<br/>
+4          166  6.350495e+06            6.954362e+06<br/>
+5          167  6.055536e+06            5.815801e+06<br/>
+6          168  5.572501e+06            5.545686e+06<br/>
+7          169  5.317780e+06            5.103337e+06<br/>
 
 ### Support vector regression Plant 2
 #### Idx - Day of year - Actual - Prediction
