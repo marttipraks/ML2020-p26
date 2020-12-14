@@ -14,9 +14,9 @@ The function also reports R2, which is not a good model measure for our case. Do
 |Method|Link to Source|Comments-parameters|SCORE day (DC_POWER)|SCORE 15min (DC_POWER)|Status
 |---------|------------|------|-----|---|---|
 |Baseline - Plant 1|[link](/Analysis/01_running_mean.ipynb)|Last 3 days average for each inverter|RMSE:3079888.0; MAE:1823703.0; R2:-0.01559|RMSE:2572.0; MAE:1020.0; R2:0.4135|Completed
-|Linear regression - Plant 1|[link](/Analysis/xyz.ipynb)|Important features (10): 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_1', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_1', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_1', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_3', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_3', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_3', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_3'|RMSE:1154715.0; MAE:959554.0; R2:-1.25209|RMSE:1583.0; MAE:879.0; R2:0.8137|Completed
+|Linear regression - Plant 1|[link](/Analysis/xyz.ipynb)|Important features (10): 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_1', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_1', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_1', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_3', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_3', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_3', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_3'|RMSE:1262887.0; MAE:1091779.0; R2:-1.6938|RMSE:1682.0; MAE:870.0; R2:0.78959|Completed
 |Random Forest - Plant 1|[link](/Analysis/xyz.ipynb)|Initial attempt was using all feautures and using Grid Search CV to tune hyperparameters. After that used PCA and reduced number of components to only 4, while explaining 99% of variance.|RMSE 5222459.1; MAE 3624121.4; R2 -1.9201|RMSE 3607.6; MAE 2952.3; R2 -0.1538|Completed 
-|XGBRegressor - Plant 1|[link](/Analysis/02_XGBoost_v4_Plant1.ipynb)|Feature reduction from all to best RMSE on train data. Best features set: 'HOUR', 'MINUTE', 'DAY_OF_YEAR', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_1', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_1', 'IRRADIATION_PER_INVERTER_DAY_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_2', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_2', 'IRRADIATION_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_3', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_3', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_3', 'IRRADIATION_PER_INVERTER_DAY_SHIFT_MINUS_3'|RMSE:4401179.0; MAE:3759344.0; R2:-1.0739|RMSE:3427.0; MAE:1793.0; R2:-0.04139|Completed
+|XGBRegressor - Plant 1|[link](/Analysis/02_XGBoost_v4_Plant1.ipynb)|Feature reduction from all to best RMSE on train data. Best features set: 'HOUR', 'MINUTE', 'DAY_OF_YEAR', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_1', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_1', 'IRRADIATION_PER_INVERTER_DAY_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_1', 'DC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_2', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_2', 'IRRADIATION_PER_INVERTER_DAY_SHIFT_MINUS_2', 'AC_POWER_PER_INVERTER_DAY_SHIFT_MINUS_3', 'AMBIENT_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_3', 'MODULE_TEMPERATURE_PER_INVERTER_DAY_SHIFT_MINUS_3', 'IRRADIATION_PER_INVERTER_DAY_SHIFT_MINUS_3'|RMSE:1320368.0; MAE:1214055.0; R2:-1.9446|RMSE:1609.0; MAE:844.0; R2:0.80759|Completed
 |Support vector regression - Plant 1|[link](/Analysis/Support%20vector%20regression.ipynb)| |RMSE:2695221.0; MAE:1098685.0; R2:0.22225 |RMSE:2401.0; MAE:868.0; R2:0.4891 |Completed
 
 ### Plant 2
@@ -32,12 +32,12 @@ The function also reports R2, which is not a good model measure for our case. Do
 # Days predicions on test data 
 ### 3 day running mean - baseline - Plant 1
 #### Idx - Day of year - Actual - Prediction
-0          162  0.000000e+00            0.000000e+00<br/>
-1          163  0.000000e+00            0.000000e+00<br/>
-2          164  0.000000e+00            0.000000e+00<br/>
-3          165  7.593776e+06            0.000000e+00<br/>
-4          166  6.350495e+06            2.531259e+06<br/>
-5          167  6.055536e+06            4.648090e+06<br/>
+0          162  5.784040e+06            7.193523e+06<br/>
+1          163  5.045679e+06            6.829388e+06<br/>
+2          164  5.222354e+06            6.021242e+06<br/>
+3          165  7.593776e+06            5.350691e+06<br/>
+4          166  6.350495e+06            5.953936e+06<br/>
+5          167  6.055536e+06            6.388875e+06<br/>
 6          168  5.572501e+06            6.666602e+06<br/>
 7          169  5.317780e+06            5.992844e+06<br/>
 
@@ -99,14 +99,14 @@ The function also reports R2, which is not a good model measure for our case. Do
 
 ## XGBRegressor Plant 1
 #### Idx - Day of year - Actual - Prediction
-0          162  0.000000e+00            9.289014e+05<br/>
-1          163  0.000000e+00            9.289014e+05<br/>
-2          164  0.000000e+00            9.289014e+05<br/>
-3          165  7.593776e+06            9.289014e+05<br/>
-4          166  6.350495e+06            1.338629e+05<br/>
-5          167  6.055536e+06            1.037796e+06<br/>
-6          168  5.572501e+06            7.125511e+05<br/>
-7          169  5.317780e+06            7.889261e+05<br/>
+0          162  5.784040e+06               6876625.0
+1          163  5.045679e+06               7018585.5
+2          164  5.222354e+06               6835856.0
+3          165  7.593776e+06               6171558.0
+4          166  6.350495e+06               6579280.0
+5          167  6.055536e+06               6719795.0
+6          168  5.572501e+06               7084776.0
+7          169  5.317780e+06               6523687.5
 
 ### XGBRegressor Plant 2
 #### Idx - Day of year - Actual - Prediction
