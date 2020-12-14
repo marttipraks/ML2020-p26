@@ -1,5 +1,6 @@
 # ML2020-p26
-Kaggle Solar Power Generation Data projekt for Machine Learning 2020 in Univeristy of Tartu. 
+Kaggle Solar Power Generation Data project for Machine Learning 2020 in Univeristy of Tartu. 
+https://www.kaggle.com/anikannal/solar-power-generation-data/notebooks
 Team P26: Kristin Petersel, William Mukose, Martti Praks, Kaarel Tark
 
 ## Results
