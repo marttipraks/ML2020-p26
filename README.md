@@ -1,8 +1,9 @@
 # ML2020-p26
 Kaggle Solar Power Generation Data projekt for Machine Learning 2020 in Univeristy of Tartu. 
+Team P26: Kristin Petersel, William Mukose, Martti Praks, Kaarel Tark
 
 ## Results
-Add your model jupyter notebook references and results to [Results.md](Results.md).
+Model jupyter notebook references and results are in [Results.md](Results.md).
 
 ## New features created:
 General naming logic is {production field}_{description of statistic}_{period}. Following fields were created:
@@ -31,7 +32,5 @@ General naming logic is {production field}_{description of statistic}_{period}. 
 * DC_DIF_AVG_PER_MOMENT - that inverter DC production compared with average of all inverters per that time moment
 * AC_DIF_AVG_PER_MOMENT - that inverter AC production compared with average of all inverters per that time moment
 
-* TODO Add to previous two new features like that day up to that moment, per that week upto that moment and total upto that moment???
-* TODO Add production averages per week??
 
 
