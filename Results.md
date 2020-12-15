@@ -8,7 +8,7 @@ Predicting **next day** power generation. Note that when you are comparing the p
 * RMSE 15min - one inverter 15 minute power generation compared to actual 15 minute power generation.
 
 Function to calculate the Daily and 15 min scores: [calculate_model_statistics.py](/Analysis/calculate_model_statistics.py)
-The function also reports R2, which is not a good model measure for our case. Do not hesitate about the negative or bad R2 score on Test data as we are having time series problem and R2 score is comparing against "Test set average" (our test set is pretty small and r2 can see the future).
+The function also reports R2, which is not a good score for our case as we aggregate the individual inverter results to daily predictions.
 
 ### Plant 1
 |Method|Link to Source|Comments-parameters|SCORE day (DC_POWER)|SCORE 15min (DC_POWER)|Status
